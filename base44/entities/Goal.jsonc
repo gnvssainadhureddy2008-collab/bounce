@@ -1,0 +1,68 @@
+{
+  "name": "Goal",
+  "type": "object",
+  "properties": {
+    "behavior": {
+      "type": "string",
+      "enum": [
+        "movement",
+        "nutrition",
+        "sleep",
+        "smoking"
+      ]
+    },
+    "own_goal": {
+      "type": "string"
+    },
+    "minutes_per_day": {
+      "type": "number",
+      "default": 10
+    },
+    "work_pattern": {
+      "type": "string",
+      "enum": [
+        "office",
+        "shifts",
+        "remote"
+      ],
+      "default": "office"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "done"
+      ],
+      "default": "active"
+    },
+    "quit_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "cigarettes_per_day": {
+      "type": "number"
+    },
+    "pack_price": {
+      "type": "number"
+    },
+    "fasting_aware": {
+      "type": "boolean",
+      "default": false
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

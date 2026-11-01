@@ -1,0 +1,40 @@
+{
+  "name": "BanditStat",
+  "type": "object",
+  "properties": {
+    "dimension": {
+      "type": "string",
+      "enum": [
+        "size",
+        "timing",
+        "tone",
+        "channel"
+      ]
+    },
+    "variant": {
+      "type": "string"
+    },
+    "successes": {
+      "type": "number",
+      "default": 0
+    },
+    "trials": {
+      "type": "number",
+      "default": 0
+    },
+    "last_updated": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

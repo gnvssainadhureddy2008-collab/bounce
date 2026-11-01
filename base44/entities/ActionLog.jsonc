@@ -1,0 +1,70 @@
+{
+  "name": "ActionLog",
+  "type": "object",
+  "properties": {
+    "action_id": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "behavior": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "done",
+        "partial",
+        "skipped"
+      ]
+    },
+    "effort": {
+      "type": "number"
+    },
+    "barrier": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "timing": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "mood": {
+      "type": "number"
+    },
+    "energy": {
+      "type": "number"
+    },
+    "note": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "live",
+        "seed",
+        "simulation"
+      ],
+      "default": "live"
+    }
+  },
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

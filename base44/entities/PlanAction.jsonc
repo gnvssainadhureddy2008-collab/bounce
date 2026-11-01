@@ -1,0 +1,87 @@
+{
+  "name": "PlanAction",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "behavior": {
+      "type": "string",
+      "enum": [
+        "movement",
+        "nutrition",
+        "sleep",
+        "smoking"
+      ]
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "micro",
+        "small",
+        "medium"
+      ]
+    },
+    "timing": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "midday",
+        "evening"
+      ]
+    },
+    "tone": {
+      "type": "string",
+      "enum": [
+        "gentle",
+        "direct",
+        "playful"
+      ]
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "app",
+        "whatsapp",
+        "sms",
+        "coach"
+      ]
+    },
+    "technique": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "done",
+        "partial",
+        "skipped"
+      ],
+      "default": "planned"
+    },
+    "effort": {
+      "type": "number"
+    }
+  },
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

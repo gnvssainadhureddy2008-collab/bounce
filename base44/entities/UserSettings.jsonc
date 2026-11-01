@@ -1,0 +1,98 @@
+{
+  "name": "UserSettings",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar"
+      ],
+      "default": "en"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "dark",
+        "light"
+      ],
+      "default": "dark"
+    },
+    "calm_mode": {
+      "type": "boolean",
+      "default": false
+    },
+    "simple_language": {
+      "type": "boolean",
+      "default": false
+    },
+    "large_text": {
+      "type": "boolean",
+      "default": false
+    },
+    "screen_reader": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobility": {
+      "type": "boolean",
+      "default": false
+    },
+    "fasting_aware": {
+      "type": "boolean",
+      "default": false
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "app",
+        "whatsapp",
+        "sms",
+        "coach"
+      ],
+      "default": "app"
+    },
+    "quiet_start": {
+      "type": "string",
+      "default": "22:00"
+    },
+    "quiet_end": {
+      "type": "string",
+      "default": "07:00"
+    },
+    "notifications": {
+      "type": "boolean",
+      "default": false
+    },
+    "consents": {
+      "type": "object",
+      "default": {}
+    },
+    "onboarded": {
+      "type": "boolean",
+      "default": false
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "vacation_mode": {
+      "type": "boolean",
+      "default": false
+    },
+    "tour_done": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}
